@@ -5,14 +5,14 @@ import java.util.Random;
 
 public class Worker {
 
-	private ArrayList<Integer> List1 = new ArrayList<Integer>();
-	private ArrayList<Integer> List2 = new ArrayList<Integer>();
-	private Object lock1 = new Object();    //Чтоб привязать созданый объект к методу
-	private Object lock2 = new Object();
-	private Random random = new Random();
+	private  ArrayList<Integer> List1 = new ArrayList<Integer>();
+	private  ArrayList<Integer> List2 = new ArrayList<Integer>();
+	private  Object lock1 = new Object();    //Чтоб привязать созданый объект к методу
+	private  Object lock2 = new Object();
+	private  Random random = new Random();
 	
-	private void partOne(){
-		synchronized (lock1) {       //Таким образом с помощью синхронайзед(lock) создаем привязку метода к объекту чтоб создать именно к методу очередь! и тогда не будут путаться потоки.
+	private   void partOne(){
+		  synchronized(lock1){     //Таким образом с помощью синхронайзед(lock) создаем привязку метода к объекту чтоб создать именно к методу очередь! и тогда не будут путаться потоки.
 			
 			try {
 				Thread.sleep(1);
@@ -22,11 +22,12 @@ public class Worker {
 			}
 			
 			List1.add(random.nextInt(100));
-		}
+		  }
+		
 	}
 	
-	private void partTwo(){
-		synchronized (lock2) {
+	private   void partTwo(){
+		synchronized(lock2){
 			
 			try {
 				Thread.sleep(1);
@@ -37,7 +38,9 @@ public class Worker {
 			
 			List2.add(random.nextInt(100));
 		}
+		
 	}
+	
 	
 	private void proceed(){
 		for(int i=0;i<1000;i++){
