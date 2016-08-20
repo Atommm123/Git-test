@@ -2,7 +2,7 @@ package Formtter;
 
 import java.util.Formatter;                          //Ot cuda berem metod(modul') formatt                
                                                       
-
+ 
                                                      //Metod printf - eto metod c cpecifikatorami:
 import java.util.Scanner;                            //&s - ctroka; %d - celoe 4uclo; %f - 4bclo c плавающей точкой;\n - nova9 ctroka
                                                      //Cpecifikatori Zamen9uts9 potom argumentami.
@@ -24,6 +24,7 @@ public class Формат {
     		String c = scn.next();
     		x.format("Men9 zovut %s, mne %d  let, 9 jivu %s", b, a, c );
     		x.close();
+    		
     	}catch(Exception e){};
     	}
     }

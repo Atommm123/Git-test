@@ -1,7 +1,7 @@
 package boob;
 
 public class dick {
-	public static void main(String args[]){
+	public static void main(Strin args[]){
 		Reader r = new Reader();
 		r.Scan();
 		r.y = count(r.y);

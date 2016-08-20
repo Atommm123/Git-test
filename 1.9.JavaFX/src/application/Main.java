@@ -20,7 +20,7 @@ public class Main extends Application {
 		this.stage = stage;
 		pane= new FlowPane();
 		label = new Label("Hello epta");
-		pane.getChildren().add(label);  //getChildren, как вариант помещения на панель коммпонентов.
+		pane.getChildren().add(label);  //метод getChildren, как вариант помещения на панель коммпонентов.
 		scene = new Scene(pane, 300, 400);
 		stage.setScene(scene);
 		stage.show();
